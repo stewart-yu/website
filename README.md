@@ -1,7 +1,7 @@
 # Creating and updating the Kubeflow docs
 
 Welcome to the GitHub repository for Kubeflow's public website. The docs are
-hosted at https://www.kubeflow.org.
+hosted at https://kubeedge.io.
 
 We use [Hugo](https://gohugo.io/) to format and generate our website, and
 [Netlify](https://www.netlify.com/) to manage the deployment of the site. Hugo
@@ -15,7 +15,7 @@ Here's a quick guide to updating the docs. It assumes you're familiar with the
 GitHub workflow and you're happy to use the automated preview of your doc
 updates:
 
-1. Fork the [kubeflow/website repo][kubeflow-website-repo] on GitHub.
+1. Fork the [Kubeedge/website repo][kubeedge-website-repo] on GitHub.
 1. Make your changes and send a pull request (PR).
 1. If you're not yet ready for a review, add a comment to the PR saying it's a
   work in progress. You can also add `/hold` in a comment to mark the PR as not
@@ -29,7 +29,7 @@ updates:
 1. Continue updating your doc until you're happy with it.
 1. When you're ready for a review, add a comment to the PR and assign a
   reviewer/approver. See the
-  [Kubeflow contributor guide][kubeflow-contributor-guide].
+  [Kubeedge contributor guide][kubeedge-contributor-guide].
 
 ## Previewing your changes on a local website server
 
@@ -67,12 +67,12 @@ brew install hugo
 Follow the usual GitHub workflow to fork the repo on GitHub and clone it to your
 local machine, then use your local repo as input to your Hugo web server:
 
-1. **Fork** the [kubeflow/website repo][kubeflow-website-repo] in the GitHub UI.
+1. **Fork** the [Kubeedge/website repo][kubeedge-website-repo] in the GitHub UI.
 1. Clone your fork locally. This example uses SSH cloning:
 
     ```
-    mkdir kubeflow
-    cd kubeflow/
+    mkdir kubeedge
+    cd kubeedge/
     git clone git@github.com:<your-github-username>/website.git
     cd website/
     ```
@@ -107,21 +107,21 @@ Here's a quick guide to a fairly standard GitHub workflow. This section is handy
 for people who don't use git or GitHub often, and just need a quick guide to
 get going:
 
-1. Fork the kubeflow/website repo:
+1. Fork the kubeedge/website repo:
 
-    * Go to the [kubeflow/website repo][kubeflow-website-repo] on GitHub.
+    * Go to the [kubeedge/website repo][kubeedge-website-repo] on GitHub.
     * Click **Fork** to make your own copy of the repo. GitHub creates a copy
       at `https://github.com/<your-github-username>/website`.
 
 1. Open a command window on your local machine.
 
 1. Clone your forked repo, to copy the files down to your local machine.
-  This example creates a directory called `kubeflow` and uses SSH cloning to
+  This example creates a directory called `kubeedge` and uses SSH cloning to
   download the files:
 
     ```
-    mkdir kubeflow
-    cd kubeflow/
+    mkdir kubeedge
+    cd kubeedge/
     git clone git@github.com:<your-github-username>/website.git
     cd website/
     ```
@@ -129,7 +129,7 @@ get going:
 1. Add the upstream repo as a git remote repo:
 
     ```
-    git remote add upstream https://github.com/kubeflow/website.git
+    git remote add upstream https://github.com/kubeedge/website.git
     ```
 
 1. Check your remotes:
@@ -277,14 +277,14 @@ example, the documentation for the v0.2 stable release are maintained in the
 Each branch has a corresponding netlify website that automatically syncs each merged PR.
 
 Going forward, the versioned sites should follow this convention:
-* `www.kubeflow.org` always points to the current *master branch*
-* `master.kubeflow.org` always points to Github head
-* `vXXX-YYY.kubeflow.org` points to the release at vXXX.YYY-branch
+* `www.kubeedge.io` always points to the current *master branch*
+* `master.kubeedge.io` always points to Github head
+* `vXXX-YYY.kubeedge.io` points to the release at vXXX.YYY-branch
 
 Furthermore, whenever any documents reference any source code, the links should be created
 using the version shortcode, like so:
 ```
-https://github.com/kubeflow/kubeflow/blob/{{< params "githubbranch" >}}/scripts/gke/deploy.sh
+https://github.com/kubeedge/kubeedge/blob/{{< params "githubbranch" >}}/scripts/gke/deploy.sh
 ```
 This ensures that all the links in a versioned webpage point to the correct branch.
 
